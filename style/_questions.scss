@@ -1,0 +1,117 @@
+.questions__text {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: #d4c17f;
+    margin-bottom: 0;
+}
+
+.container__questions {
+    @include flex(center, space-between);
+
+    .questions__items {
+        width: 255px;
+        height: 50px;
+        text-align: center;
+        margin-top: -35px;
+
+        @media (max-width:1080px) {
+            width: 230px;
+        }
+
+        @media (max-width:980px) {
+            width: 200px;
+        }
+        @media (max-width:860px) {
+            width: 60%;
+            margin: 10px auto;
+        }
+    }
+
+    input {
+        background: $white;
+        opacity: 0.2;
+        border: none;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 27px;
+        font-family: $Ral;
+        transition: .5s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    p {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        padding: 10px 10px 0 0;
+        text-align: center;
+        color: #E7E7E7;
+
+        @media (max-width:372px) {
+            padding: 0;
+        }
+    }
+
+    button {
+        background: $gold;
+        border: none;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 27px;
+        font-family: $Ral;
+        color: $white;
+        cursor: pointer;
+        transition: .8s;
+        position: relative;
+        overflow: hidden;
+
+        &:hover{
+            font-size: 20px;
+            transform: scale(1.1);
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 200px;
+            margin-left: 50px;
+            background: #fff;
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0.5) 0%,
+                rgba(255, 255, 255, 1) 50%,
+                rgba(255, 255, 255, 0.5) 100%
+            );
+            left: -40px;
+            top: -100px;
+            z-index: 1;
+            transform: rotate(45deg);
+            position: absolute;
+            animation: movingFlare 2s ease-in-out 0.05s infinite;
+        }
+           
+          @keyframes movingFlare {
+            0% {
+              left: -30px;
+              margin-left: 0px;
+            }
+            30% {
+              left: 110%;
+              margin-left: 80px;
+            }
+            100% {
+              left: 110%;
+              margin-left: 80px;
+            }
+        }
+    }
+}

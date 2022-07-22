@@ -1,0 +1,74 @@
+.container {
+
+    h3{
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 36px;
+        line-height: calc(25px + (48 - 25) * ((100vw - 320px) / (1140 - 320)));
+        color: $gold;
+        margin-bottom: 82px;
+    }
+
+    &__appartments {
+        @include flex(center, center);
+    }
+
+    .appartments__items{
+        width: 535px;
+        height: 320px;
+        margin: 10px;
+        margin-left: 0;
+        position: relative;
+        transition: .7s ease-in-out;
+
+        span{
+            position: absolute;
+            top: 252px;
+            left: 50px;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            z-index: 3;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #242B33 0%, rgba(36, 43, 51, 0) 0.01%, #242B33 100%);
+            z-index: 1;
+        }
+    }
+
+    @media (max-width: 570px) {
+        .appartments__items{
+            width: 
+            calc(320px + (535 - 320) * ((100vw - 320px) / (1140 - 320)));
+            height: 230px;
+
+            img {
+                width: 100%;
+            }
+
+            span{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+    }
+}

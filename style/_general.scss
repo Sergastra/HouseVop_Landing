@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap');
+
+$PD: 'Playfair Display', serif;
+$Ral: 'Raleway', sans-serif;
+
+$white: #ffff;
+$gold: #D4C17F;
+$bg: #E5E5E5;
+
+$wrap: 1920px;
+$container: 1140px;
+$mc: 0 auto;
+
+@mixin flex($ait, $jco) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: $ait;
+    justify-content: $jco;
+}
+
+body {
+    background: $bg;
+    font-family: $Ral;
+    color: $white;
+}
+
+body.noscroll {
+    overflow: hidden;
+}
+
+.wrapper {
+    max-width: $wrap;
+    margin: $mc;
+    background: #242B33;
+    
+}
+
+.container {
+    max-width: $container;
+    margin: $mc;
+    padding: 0 15px;
+}
